@@ -1,4 +1,4 @@
-# pclish.utilities.jaydenmw
+# pclish.utilities.jaydenmw (now just pclish)
 
 A simple shell subsystem written in Python that can has its own commands, and can run OS commands.
 
