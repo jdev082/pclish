@@ -83,8 +83,7 @@ def main():
         elif inp == "system":
             pclish_system()
         else:
-            os.system("SHELL='pclish'")
-            os.system(inp)
+            os.system("SHELL='pclish' && " + inp)
 
 #  Main
 if '__main__' == __name__:
