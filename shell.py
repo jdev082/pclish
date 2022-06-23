@@ -57,14 +57,6 @@ def pclish_cd(path):
     except Exception:
         print("cd: no such file or directory: {}".format(path))
 
-def pclish_echo():
-    TXT = input("ARGS: ")
-    print(TXT)
-
-def pclish_oscmd():
-    CMD = input("ARGS: ")
-    os.system(CMD)
-
 def pclish_help():
     print("""pclish: here are the commands available
              help: shows this page
@@ -76,15 +68,9 @@ def pclish_help():
              shtdwnsubsys: shuts down the sub system
              oscmd: allows you to run an OS level command""")
 
-def pclish_ls():
-    print("pclish: this feature is not yet supported")
-
 def pclish_ver():
     print(VER)
 
-def pclish_mkdir():
-    DIR = input("ARGS: ")
-    os.mkdir(DIR)
 
 def pclish_system():
     print("HOSTNAME:" + HOST)
@@ -95,9 +81,6 @@ def pclish_system():
     print("SHELL:" + VER)
     
 
-def pclish_shtdwnsubsys():
-    print("Exiting to..." + OS)
-    exit()
 
 def main():
     while True:
@@ -110,18 +93,8 @@ def main():
             pclish_help()
         elif inp == "ver":
             pclish_ver()
-        elif inp == "ls":
-            pclish_ls()
-        elif inp == "mkdir":   
-            pclish_mkdir()
-        elif inp == "shtdwnsubsys":
-            pclish_shtdwnsubsys()
         elif inp == "system":
             pclish_system()
-        elif inp == "echo":
-            pclish_echo()
-        elif inp == "oscmd":
-            pclish_oscmd()
         else:
             os.system(inp)
 
