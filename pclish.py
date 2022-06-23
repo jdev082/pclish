@@ -7,8 +7,6 @@ import psutil
 import platform
 import socket
 
-my_env = os.environ.copy()
-
 RAM = psutil.virtual_memory()
 CPU = platform.processor()
 OS = platform.system()
@@ -85,7 +83,7 @@ def main():
         elif inp == "system":
             pclish_system()
         else:
-            subprocess.run(inp, env=my_env)
+            subprocess.call(imp, shell=True, cwd=os.getcwd)
 
 #  Main
 if '__main__' == __name__:
