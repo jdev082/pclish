@@ -1,16 +1,13 @@
 # PCLISH - Python Command Line Shell
 # Installation Script
 
+rm -rf /home/$USER/.local/bin/pclish_dir/
 sudo pip install pyinstaller
 rm -rf /tmp/pclish
-sudo rm -rf /usr/bin/pclish
-sudo rm -rf /usr/bin/pclish_dir
+sudo rm -rf /home/$USER/.local/bin/pclish
+sudo rm -rf /home/$USER/.local/bin/pclish_dir
 git clone https://github.com/JaydenDev/pclish /tmp/pclish
-pyinstaller /tmp/pclish/pclish.py
-sudo mkdir /usr/bin/pclish_dir
-sudo mv /tmp/pclish/dist/pclish/* /usr/bin/pclish_dir
-sudo ln -sf /usr/bin/pclish_dir/pclish /usr/bin/pclish
-sudo chmod +x /usr/bin/pclish
-
-
-
+mkdir /home/$USER/.local/bin/pclish_dir
+pyinstaller /tmp/pclish/pclish.py --distpath=/tmp/pclish_dir
+mv /tmp/pclish_dir/dist/pclish/pclish /home/$USER/.local/bin/
+chmod +x /home/$USER/.local/bin/pclish

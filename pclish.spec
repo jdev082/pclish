@@ -5,7 +5,7 @@ block_cipher = None
 
 
 a = Analysis(
-    ['pclish.py'],
+    ['/tmp/pclish/pclish.py'],
     pathex=[],
     binaries=[],
     datas=[],
