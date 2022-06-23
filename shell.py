@@ -1,5 +1,5 @@
 #!/usr/bin/env python3 
-# PCLISH - Python Command Line Shell
+# pclish - Python Command Line Shell
 
 import os
 import subprocess
@@ -11,7 +11,7 @@ RAM = psutil.virtual_memory()
 CPU = platform.processor()
 OS = platform.system()
 HOST = socket.gethostname()
-VER = "PCLISH v0.1.0-devPreview"
+VER = "pclish v0.1.0-devPreview"
 
 PROMPT = "shell@{}$ ".format(HOST)
 
@@ -50,23 +50,12 @@ def execute_command(command):
     except Exception:
         print("pclish: command not found: {}".format(command))
 
-
-def pclish_cd(path):
-    try:
-        os.chdir(os.path.abspath(path))
-    except Exception:
-        print("cd: no such file or directory: {}".format(path))
-
 def pclish_help():
     print("""pclish: here are the commands available
              help: shows this page
-             cd: change directory
              ver: displays shell version
-             ls: lists files in current dir
              system: shows system information
-             mkdir: creates a directory
-             shtdwnsubsys: shuts down the sub system
-             oscmd: allows you to run an OS level command""")
+             shtdwnsubsys: shuts down the sub system""")
 
 def pclish_ver():
     print(VER)
@@ -87,8 +76,6 @@ def main():
         inp = input(PROMPT)
         if inp == "exit":
             break
-        elif inp == "cd ":
-            pclish_cd(inp[3:])
         elif inp == "help":
             pclish_help()
         elif inp == "ver":
