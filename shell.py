@@ -11,7 +11,7 @@ RAM = psutil.virtual_memory()
 CPU = platform.processor()
 OS = platform.system()
 HOST = socket.gethostname()
-VER = "PCLISH v0.0.6a-hotfix1a"
+VER = "PCLISH v0.1.0-devPreview"
 
 PROMPT = "shell@{}$ ".format(HOST)
 
@@ -123,7 +123,7 @@ def main():
         elif inp == "oscmd":
             pclish_oscmd()
         else:
-            execute_command(inp)
+            os.system(inp)
 
 #  Main
 if '__main__' == __name__:
