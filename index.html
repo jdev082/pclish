@@ -1,13 +1,22 @@
-#!/usr/bin/env python3 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCLISH</title>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+</head>
+<body>
+    <py-script>
+        #!/usr/bin/env python3
 # PCLISH - Python Command Line Shell
 
 import os
 import subprocess
-import psutil
 import platform
 import socket
 
-RAM = psutil.virtual_memory()
 CPU = platform.processor()
 OS = platform.system()
 HOST = socket.gethostname()
@@ -89,7 +98,6 @@ def pclish_mkdir():
 def pclish_system():
     print("HOSTNAME:" + HOST)
     print("System: PCLISH SUBSYSTEM")
-    print("RAM:" + RAM)
     print("CPU:" + CPU)
     print("OS:" + OS)
     print("SHELL:" + VER)
@@ -128,3 +136,6 @@ def main():
 #  Main
 if '__main__' == __name__:
     main()
+    </py-script>
+</body>
+</html>
