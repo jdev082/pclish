@@ -82,6 +82,8 @@ def main():
             pclish_system()
         elif "cd" in inp:
           print("pclish unfortunately does not support cd")
+        elif ".sh" in inp:
+            subprocess.run(os.getcwd + "/" + inp)
         else:
             subprocess.call(inp, shell=True)
 
