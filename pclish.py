@@ -83,7 +83,10 @@ def main():
         elif inp == "system":
             pclish_system()
         else:
-            os.system("SHELL='/bin/pclish' && " + inp)
+            if inp == "neofetch":
+                os.system(inp)
+            else:
+                os.system("SHELL='/bin/pclish' && " + inp)
 
 #  Main
 if '__main__' == __name__:
