@@ -83,10 +83,7 @@ def main():
         elif inp == "system":
             pclish_system()
         else:
-            if inp == "neofetch":
-                subprocess.run(inp)
-            else:
-                subprocess.run("SHELL='/bin/pclish' && " + inp)
+            subprocess.run(inp)
 
 #  Main
 if '__main__' == __name__:
