@@ -9,5 +9,6 @@ sudo rm -rf /home/$USER/.local/bin/pclish_dir
 git clone https://github.com/JaydenDev/pclish /tmp/pclish
 mkdir /home/$USER/.local/bin/pclish_dir
 pyinstaller /tmp/pclish/pclish.py --distpath=/tmp/pclish_dir
-mv /tmp/pclish_dir/dist/pclish/pclish /home/$USER/.local/bin/
+mv /tmp/pclish_dir/pclish /home/$USER/.local/bin/pclish_dir
+ln -sf /home/$USER/.local/bin/pclish_dir/pclish/pclish /home/$USER/.local/bin/pclish
 chmod +x /home/$USER/.local/bin/pclish
