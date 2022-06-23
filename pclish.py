@@ -83,7 +83,7 @@ def main():
         elif inp == "system":
             pclish_system()
         else:
-            subprocess.call(imp, shell=True, cwd=os.getcwd)
+            subprocess.call(inp, shell=True)
 
 #  Main
 if '__main__' == __name__:
