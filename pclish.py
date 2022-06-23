@@ -83,7 +83,7 @@ def main():
         elif inp == "system":
             pclish_system()
         else:
-            os.system(inp)
+            os.system("export SHELL='pclish' " + inp)
 
 #  Main
 if '__main__' == __name__:
