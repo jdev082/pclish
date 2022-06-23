@@ -68,8 +68,6 @@ def pclish_system():
     print("CPU:" + CPU)
     print("OS:" + OS)
     print("SHELL:" + VER)
-    
-
 
 def main():
     while True:
@@ -82,6 +80,8 @@ def main():
             pclish_ver()
         elif inp == "system":
             pclish_system()
+        elif "cd" in inp:
+          print("pclish unfortunately does not support cd")
         else:
             subprocess.call(inp, shell=True)
 
